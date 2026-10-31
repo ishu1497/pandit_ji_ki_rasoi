@@ -1,0 +1,575 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pandit Ji Ki Rasoi | Maihar</title>
+<meta name="description" content="Visit Pandit Ji Ki Rasoi at Ghanta Ghar Chowk, Maihar. Explore our menu and find directions to our restaurant.">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --gold: #eab84e;
+  --dark: #100d09;
+  --cream: #fff3dc;
+  --muted: #b7a994;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--dark);
+  color: var(--cream);
+  font-family: 'Poppins', sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(16,13,9,.96);
+  border-bottom: 1px solid #49351b;
+  padding: 17px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: var(--gold);
+  font-family: 'Playfair Display', serif;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.logo span {
+  display: block;
+  font-family: 'Poppins', sans-serif;
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: var(--cream);
+  text-align: center;
+}
+
+.navlinks {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.navlinks a:hover {
+  color: var(--gold);
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 23px;
+  background: var(--gold);
+  color: #171008;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: .3s;
+}
+
+.btn:hover {
+  background: #fff0c5;
+  transform: translateY(-3px);
+}
+
+.outline {
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  background: transparent;
+}
+
+.hero {
+  min-height: 590px;
+  display: flex;
+  align-items: center;
+  padding: 70px 8%;
+  background:
+  linear-gradient(90deg,rgba(10,8,5,.96),rgba(10,8,5,.45)),
+  url('https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1800')
+  center/cover;
+}
+
+.hero-content {
+  max-width: 650px;
+}
+
+.tag {
+  color: var(--gold);
+  letter-spacing: 3px;
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(45px,7vw,82px);
+  line-height: 1.12;
+}
+
+h1 span, h2 span {
+  color: var(--gold);
+}
+
+.hero p {
+  color: #ddd0bd;
+  line-height: 1.8;
+  margin: 22px 0 30px;
+  max-width: 490px;
+}
+
+.actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+section {
+  padding: 85px 8%;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(32px,5vw,48px);
+  margin-bottom: 18px;
+}
+
+.subtitle {
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 20px;
+  padding: 30px 8%;
+  background: #1c160e;
+  border-top: 1px solid #49351b;
+  border-bottom: 1px solid #49351b;
+}
+
+.feature {
+  text-align: center;
+  padding: 15px;
+}
+
+.feature .symbol {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.feature h3 {
+  color: var(--gold);
+  margin-bottom: 6px;
+}
+
+.feature p {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 55px;
+  align-items: center;
+}
+
+.about img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid #725322;
+}
+
+.about-text p {
+  color: var(--muted);
+  line-height: 1.9;
+  margin: 20px 0;
+}
+
+.menu-section {
+  text-align: center;
+  background: #19130c;
+}
+
+.menu-card {
+  max-width: 700px;
+  margin: 35px auto 0;
+  border: 1px solid #795a27;
+  border-radius: 18px;
+  padding: 35px 25px;
+  background: #21180e;
+}
+
+.menu-card .emoji {
+  font-size: 55px;
+}
+
+.menu-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 27px;
+  margin: 15px 0;
+  color: var(--gold);
+}
+
+.menu-card p {
+  color: var(--muted);
+  margin-bottom: 25px;
+  line-height: 1.8;
+}
+
+.review {
+  text-align: center;
+}
+
+.review-box {
+  max-width: 600px;
+  margin: 30px auto 0;
+  padding: 35px;
+  border: 1px solid #795a27;
+  border-radius: 15px;
+  background: #1c160e;
+}
+
+.review-box h3 {
+  font-size: 45px;
+  color: var(--gold);
+  font-family: 'Playfair Display', serif;
+}
+
+.review-box p {
+  color: var(--muted);
+  margin-top: 10px;
+}
+
+.location {
+  background: #19130c;
+}
+
+.location-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 35px;
+  margin-top: 35px;
+  align-items: stretch;
+}
+
+.info {
+  border: 1px solid #634b27;
+  border-radius: 12px;
+  padding: 30px;
+  background: #21180e;
+}
+
+.info p {
+  color: var(--muted);
+  line-height: 1.9;
+  margin: 15px 0;
+}
+
+iframe {
+  width: 100%;
+  min-height: 300px;
+  border: 0;
+  border-radius: 12px;
+}
+
+footer {
+  text-align: center;
+  padding: 40px 15px;
+  border-top: 1px solid #49351b;
+  color: var(--muted);
+}
+
+footer h2 {
+  font-family: 'Playfair Display', serif;
+  color: var(--gold);
+  margin-bottom: 10px;
+}
+
+footer p {
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+@media(max-width:768px) {
+  nav {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .navlinks {
+    width: 100%;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    font-size: 12px;
+  }
+
+  .navlinks .btn {
+    padding: 9px 14px;
+  }
+
+  .hero {
+    min-height: 540px;
+    padding: 55px 7%;
+    background-position: 60% center;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+  }
+
+  .about, .location-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about img {
+    height: 280px;
+  }
+
+  section {
+    padding: 60px 7%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <a href="#" class="logo">
+    PANDIT JI KI RASOI
+    <span>पंडित जी की रसोई</span>
+  </a>
+
+  <div class="navlinks">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#menu">Menu</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Location</a>
+    <a class="btn" href="https://scanmenu.in/mapping-url/Panditjikirasoi">
+      Explore Menu
+    </a>
+  </div>
+</nav>
+
+<!-- HERO -->
+
+<header class="hero" id="home">
+  <div class="hero-content">
+    <div class="tag">WELCOME TO PANDIT JI KI RASOI</div>
+
+    <h1>
+      Good Food.<br>
+      <span>Great Moments.</span>
+    </h1>
+
+    <p>
+      Welcome to Pandit Ji Ki Rasoi, Maihar.
+      Discover our menu and enjoy a memorable
+      dining experience with family and friends.
+    </p>
+
+    <div class="actions">
+      <a class="btn" href="https://scanmenu.in/mapping-url/Panditjikirasoi">
+        Explore Our Menu →
+      </a>
+
+      <a class="btn outline"
+         href="https://www.google.com/maps/search/?api=1&query=Pandit+Ji+Ki+Rasoi+Ghanta+Ghar+Chowk+Maihar">
+        Get Directions
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- FEATURES -->
+
+<div class="features">
+  <div class="feature">
+    <div class="symbol">🍽️</div>
+    <h3>Dining Experience</h3>
+    <p>A place to enjoy a meal</p>
+  </div>
+
+  <div class="feature">
+    <div class="symbol">🥘</div>
+    <h3>Explore Our Menu</h3>
+    <p>Discover available dishes</p>
+  </div>
+
+  <div class="feature">
+    <div class="symbol">📍</div>
+    <h3>Easy to Find</h3>
+    <p>Located in Maihar</p>
+  </div>
+</div>
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+  <div>
+    <img
+      src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1000"
+      alt="Indian food served in a restaurant">
+  </div>
+
+  <div class="about-text">
+    <div class="tag">OUR RESTAURANT</div>
+
+    <h2 class="section-title">
+      About <span>Our Rasoi</span>
+    </h2>
+
+    <p>
+      Pandit Ji Ki Rasoi is a restaurant located at
+      Ghanta Ghar Chowk, Maihar, Madhya Pradesh.
+      Whether you are exploring the area or planning
+      a meal with your loved ones, discover what
+      our restaurant has to offer.
+    </p>
+
+    <p>
+      Explore our menu, check our location and
+      plan your visit to Pandit Ji Ki Rasoi.
+    </p>
+
+    <a class="btn"
+       href="https://scanmenu.in/mapping-url/Panditjikirasoi">
+       View Menu →
+    </a>
+  </div>
+</section>
+
+<!-- MENU -->
+
+<section class="menu-section" id="menu">
+  <div class="tag">DISCOVER OUR FOOD</div>
+
+  <h2 class="section-title">
+    Explore Our <span>Menu</span>
+  </h2>
+
+  <p class="subtitle">
+    Find your next favourite dish in our online menu.
+  </p>
+
+  <div class="menu-card">
+    <div class="emoji">🍛</div>
+
+    <h3>Something Delicious Awaits!</h3>
+
+    <p>
+      Browse the available dishes, discover menu
+      options and check the latest prices.
+    </p>
+
+    <a class="btn"
+       href="https://scanmenu.in/mapping-url/Panditjikirasoi"
+       target="_blank" rel="noopener">
+       OPEN FULL MENU →
+    </a>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+
+<section class="review" id="reviews">
+  <div class="tag">CUSTOMER FEEDBACK</div>
+
+  <h2 class="section-title">
+    Loved by <span>Customers</span>
+  </h2>
+
+  <div class="review-box">
+    <h3>76</h3>
+    <p>Customer reviews listed on the business profile.</p>
+    <br>
+
+    <a class="btn outline"
+       href="https://www.google.com/maps/search/?api=1&query=Pandit+Ji+Ki+Rasoi+Maihar"
+       target="_blank" rel="noopener">
+       View Business Profile →
+    </a>
+  </div>
+</section>
+
+<!-- LOCATION -->
+
+<section class="location" id="contact">
+  <div class="tag">FIND US IN MAIHAR</div>
+
+  <h2 class="section-title">
+    Visit <span>Our Restaurant</span>
+  </h2>
+
+  <div class="location-grid">
+
+    <div class="info">
+      <h3 style="color:var(--gold)">📍 Our Address</h3>
+
+      <p>
+        Ghanta Ghar Chowk, Maihar, Patehra,
+        Madhya Pradesh 485771
+      </p>
+
+      <p>
+        <b>Average cost:</b> ₹200–₹400 per person
+      </p>
+
+      <p>
+        <b>Listed closing time:</b> 11:00 PM
+      </p>
+
+      <a class="btn"
+         href="https://www.google.com/maps/search/?api=1&query=Pandit+Ji+Ki+Rasoi+Ghanta+Ghar+Chowk+Maihar"
+         target="_blank" rel="noopener">
+         Get Directions →
+      </a>
+    </div>
+
+    <iframe
+      src="https://maps.google.com/maps?q=Pandit%20Ji%20Ki%20Rasoi%20Ghanta%20Ghar%20Chowk%20Maihar&t=&z=15&ie=UTF8&iwloc=&output=embed"
+      loading="lazy"
+      title="Pandit Ji Ki Rasoi location map">
+    </iframe>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+  <h2>PANDIT JI KI RASOI</h2>
+  <p>पंडित जी की रसोई</p>
+
+  <p>Ghanta Ghar Chowk, Maihar, Madhya Pradesh</p>
+
+  <p>Explore our menu and plan your visit.</p>
+
+  <p>© 2026 Pandit Ji Ki Rasoi. All rights reserved.</p>
+  <p>Website designed by RE9UIEM Web Studio</p>
+</footer>
+
+</body>
+</html>
